@@ -3,8 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function Square({value}) {
-  return <button className="square">{value}</button>;
+function Square({ value, onSquareClick }) {
+  return (
+    <button className="square" onClick={onSquareClick}>
+      {value}
+    </button>
+  );
 }
 export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
